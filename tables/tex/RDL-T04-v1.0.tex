@@ -1,0 +1,62 @@
+% RDL T04 v1.0 -- generated publication-table staging file.
+% Artefact status: diagnostic output.
+% Required packages: geometry, booktabs, longtable, array, ragged2e, caption.
+% Source CSV: tables/csv/RDL-T04-v1.0.csv
+% Caption source: captions/RDL-T04-CAP-v1.0.md
+% Generating script: scripts/RDL-TAB.py
+% Copy the block between CUT-PASTE markers into the supplement; retain the packages above.
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{booktabs,longtable,array,ragged2e,caption}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\footnotesize
+% ===== CUT-PASTE TABLE BEGIN =====
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{1.6cm}>{\RaggedRight\arraybackslash}p{2.6cm}>{\RaggedRight\arraybackslash}p{2.8cm}>{\RaggedRight\arraybackslash}p{4.7cm}>{\RaggedRight\arraybackslash}p{4.6cm}>{\RaggedRight\arraybackslash}p{4.7cm}>{\RaggedRight\arraybackslash}p{2.4cm}@{}}
+\caption{Controlled parameter register for the implemented and gated RDL targets. The table records baseline values, scenario grids, units or normalisations, dependent outputs and status. Values are synthetic and dimensionless unless a calendar-event unit is stated. Blank values for the propagator and lattice/PDE controls are deliberate: those branches remain blocked, deferred or future only. This is a reproducibility register, not an empirical calibration table. Source: registers/RDL-PAR-v1.1.csv; staged by scripts/RDL-TAB.py.}\label{tab:rdl-t04}\\
+\toprule
+\textbf{Code} & \textbf{Symbol Or Name} & \textbf{Baseline} & \textbf{Scenario Or Range} & \textbf{Units Or Scaling} & \textbf{Dependent Outputs} & \textbf{Status} \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\tablename\ \thetable\ continued}\\
+\toprule
+\textbf{Code} & \textbf{Symbol Or Name} & \textbf{Baseline} & \textbf{Scenario Or Range} & \textbf{Units Or Scaling} & \textbf{Dependent Outputs} & \textbf{Status} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+PAR01 & alpha\_L & 1.5 & 1.2; 1.4; 1.6; 1.8 & dimensionless meta-order tail exponent & F03; later F04 & frozen \\
+PAR02 & gamma\_epsilon & 0.5 & 0.2; 0.4; 0.6; 0.8 & derived as alpha\_L-1 & F03; later F04 & derived \\
+PAR03 & mathcal\_L\_u & 1.0 & positive sensitivity later & dimensionless local liquidity slope & F05; F06; F07; F02 & frozen \\
+PAR04 & D\_u & 1.0 & positive sensitivity later & dimensionless operational diffusion scale & F05; F06; F07; F02 & frozen \\
+PAR05 & nu\_u & 0.0 & 0; 0.25; 1; 4 & reported as nu\_u times T\_u & F05; F06; F07 & frozen \\
+PAR06 & mu\_0 & 1.0 & fixed-rate baseline & dimensionless signed operational rate & F06; F07; F02 & frozen \\
+PAR07 & T\_u & 1.0 & post-completion horizon 4 times T\_u & dimensionless operational horizon & F06; F07; F02 & frozen \\
+PAR08 & Q & 1.0 & 10\textasciicircum{}-2 to 10\textasciicircum{}2; 41 log-spaced points & dimensionless signed volume & F02; F07 & frozen \\
+PAR09 & q\_0 & 1.0 & single-pulse area & dimensionless signed child-order size & F05 & frozen \\
+PAR10 & tau\_0 & 0.01 & 0.005; 0.01; 0.02 & fraction of unit operational horizon & F05 & frozen \\
+PAR11 & L\_meta & 256 & one illustrative meta-order & event count & F02 & frozen \\
+PAR12 & q\_child & 0.00390625 & 1/L\_meta & dimensionless volume per event & F02 & derived \\
+PAR13 & alpha\_U & 1.0 & 0.5; 1; 2 & dimensionless operational activity rate & F01; F02; F07 & frozen \\
+PAR14 & wait\_constant & 1.0 & single baseline & calendar units per event & F02 & frozen \\
+PAR15 & wait\_exponential & 1.0 & scale and mean & calendar units per event & F02 & frozen \\
+PAR16 & wait\_lomax & shape 1.5; scale 0.5 & finite mean 1 & calendar units per event & F02 & frozen \\
+PAR17 & wait\_pareto & shape 0.7; scale 1 & infinite mean & calendar units per event & F02 & frozen \\
+PAR18 & n\_events\_mc & 262144 & 2\textasciicircum{}18 events per replicate & event count & F03 & diagnostic \\
+PAR19 & n\_burn\_mc & 16384 & 2\textasciicircum{}14 events & event count & F03 & diagnostic \\
+PAR20 & n\_rep\_mc & 8 & independent deterministic seed contexts & replicate count & F03 & diagnostic \\
+PAR21 & max\_lag\_exact & 10000 & integer lags 0 through 10000 & event lag & F03 & frozen \\
+PAR22 & max\_lag\_mc & 2048 & acceptance window 1 through 128 & event lag & F03 & diagnostic \\
+PAR23 & n\_grid\_u & 2001 & 1001; 2001; 4001 refinement & uniform operational grid & F05; F06 & frozen \\
+PAR24 & Q\_grid & 41 & 10\textasciicircum{}-2 to 10\textasciicircum{}2 & log10 grid & F07 & frozen \\
+PAR25 & seed\_master & 20260710 & context-derived SeedSequence & integer seed for stochastic targets & F02; F03; later F04; later F10 & frozen \\
+PAR26 & beta\_G &  & blocked & not selected & F09 & deferred \\
+PAR27 & lambda\_G &  & blocked & not selected & F09 & deferred \\
+PAR28 & lattice\_controls &  & future successor project & not selected & full lattice/PDE & future only \\
+\end{longtable}
+% ===== CUT-PASTE TABLE END =====
+\end{document}

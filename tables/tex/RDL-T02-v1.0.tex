@@ -1,0 +1,39 @@
+% RDL T02 v1.0 -- generated publication-table staging file.
+% Artefact status: diagnostic output.
+% Required packages: geometry, booktabs, longtable, array, ragged2e, caption.
+% Source CSV: tables/csv/RDL-T02-v1.0.csv
+% Caption source: captions/RDL-T02-CAP-v1.0.md
+% Generating script: scripts/RDL-TAB.py
+% Copy the block between CUT-PASTE markers into the supplement; retain the packages above.
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{booktabs,longtable,array,ragged2e,caption}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\footnotesize
+% ===== CUT-PASTE TABLE BEGIN =====
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.3cm}>{\RaggedRight\arraybackslash}p{4.3cm}>{\RaggedRight\arraybackslash}p{5.0cm}>{\RaggedRight\arraybackslash}p{5.0cm}>{\RaggedRight\arraybackslash}p{5.2cm}>{\RaggedRight\arraybackslash}p{2.6cm}@{}}
+\caption{Clock taxonomy for the two admissible projection routes. Child-order event order is native. Route A attaches positive waiting times and uses the inverse counter to obtain a calendar state. Route B first defines an operational response and then composes it with a monotone activity clock. The routes are alternative representations unless a separate coupling is declared; the table does not authorize sequential double-clocking. Source: registers/RDL-CLK-v1.0.md; staged by scripts/RDL-TAB.py.}\label{tab:rdl-t02}\\
+\toprule
+\textbf{Layer} & \textbf{Native Object} & \textbf{Map Or Construction} & \textbf{Calendar Interpretation} & \textbf{Key Control} & \textbf{Dependent Outputs} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ continued}\\
+\toprule
+\textbf{Layer} & \textbf{Native Object} & \textbf{Map Or Construction} & \textbf{Calendar Interpretation} & \textbf{Key Control} & \textbf{Dependent Outputs} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Child-order event sequence & \(m=0,1,2,\ldots\) & Ordered states and trade signs & No calendar duration is intrinsic & Event order is primary & F03; F08 \\
+Event timestamps & \(\Delta t_m>0;\ T_m=\sum_{k=1}^m\Delta t_k\) & Attach positive waiting times & Calendar time assigned to each event & Do not mix waiting-law regimes & F02 \\
+Route A inverse counter & \(N_t=\max\{m:T_m\le t\}\) & \(X_A(t)=Y_{N_t}\) & Direct event-counter projection & Right-continuous convention & F02 \\
+Operational response & \(u\ge0;\ S(u);\ I_u(u)\) & Solve the response in operational time & No calendar representation yet & Do not apply Route A afterward without a coupling & F05; F06; F07 \\
+Route B activity projection & \(u=U(t);\ \alpha_U=\mathrm dU/\mathrm dt\ge0\) & \(X_B(t)=S(U(t));\ I_B(t)=I_u(U(t))\) & Calendar representation through activity & Monotone clock and explicit route label & F02; F07 \\
+\end{longtable}
+% ===== CUT-PASTE TABLE END =====
+\end{document}

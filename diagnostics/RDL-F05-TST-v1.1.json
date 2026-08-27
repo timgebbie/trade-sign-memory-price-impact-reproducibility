@@ -1,0 +1,48 @@
+{
+  "target": "F05",
+  "version": "v1.1",
+  "checks": {
+    "ACC20": true,
+    "ACC21": true,
+    "F06_kernel_inheritance": true
+  },
+  "pulse_area_absolute_errors": {
+    "tau=0.005,nu=0": 0.0,
+    "tau=0.005,nu=1": 0.0,
+    "tau=0.005,nu=4": 0.0,
+    "tau=0.01,nu=0": 0.0,
+    "tau=0.01,nu=1": 0.0,
+    "tau=0.01,nu=4": 0.0,
+    "tau=0.02,nu=0": 0.0,
+    "tau=0.02,nu=1": 0.0,
+    "tau=0.02,nu=4": 0.0
+  },
+  "finite_and_zero_at_origin": {
+    "tau=0.005,nu=0": true,
+    "tau=0.005,nu=1": true,
+    "tau=0.005,nu=4": true,
+    "tau=0.01,nu=0": true,
+    "tau=0.01,nu=1": true,
+    "tau=0.01,nu=4": true,
+    "tau=0.02,nu=0": true,
+    "tau=0.02,nu=1": true,
+    "tau=0.02,nu=4": true
+  },
+  "analytic_numeric_relative_linf_errors": {
+    "tau=0.005,nu=0": 1.5793050710012277e-15,
+    "tau=0.005,nu=1": 2.7875553897210646e-15,
+    "tau=0.005,nu=4": 1.400740719946955e-15,
+    "tau=0.01,nu=0": 1.1314959683324761e-15,
+    "tau=0.01,nu=1": 1.9743806472964824e-15,
+    "tau=0.01,nu=4": 9.970454574067603e-16,
+    "tau=0.02,nu=0": 8.209603452781713e-16,
+    "tau=0.02,nu=1": 2.1011110799204325e-15,
+    "tau=0.02,nu=4": 7.143292908200224e-16
+  },
+  "pre_forcing_response": 0.0,
+  "checksums": {
+    "csv": "918fd5888d3169370bd2f9202c5745ee49ac38670b632d53435471bfc4917f41",
+    "pdf": "5f9b9f8b0f71106a79455d6bffb99bed0701cab4d076b38c3884bbda3e085ee6",
+    "png": "0ab7a5271751c261d3830c8d213f084a5fbd233b836705f935853c28f56c3369"
+  }
+}

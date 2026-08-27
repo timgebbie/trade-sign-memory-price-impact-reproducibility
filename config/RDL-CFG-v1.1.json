@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.1",
+  "project": "RDL",
+  "route": "simulation_only",
+  "float_dtype": "float64",
+  "random": {
+    "master_seed": 20260710,
+    "bit_generator": "PCG64DXSM",
+    "seed_rule": "SeedSequence([master_seed, target_id, scenario_id, replicate_id])"
+  },
+  "lmf": {
+    "length_distribution": "zeta",
+    "pmf": "l^(-(alpha_L+1))/zeta(alpha_L+1), l>=1",
+    "baseline_alpha_L": 1.5,
+    "alpha_L_grid": [1.2, 1.4, 1.6, 1.8],
+    "exact_lag_max": 10000,
+    "mc_enabled_by_default": false,
+    "mc_events": 262144,
+    "mc_burn_events": 16384,
+    "mc_replicates": 8,
+    "mc_lag_max": 2048,
+    "mc_acceptance_lag_max": 128
+  },
+  "response": {
+    "mathcal_L_u": 1.0,
+    "D_u": 1.0,
+    "mu_0": 1.0,
+    "T_u": 1.0,
+    "nu_u_grid": [0.0, 0.25, 1.0, 4.0],
+    "post_completion_T_multiple": 4.0,
+    "grid_points": 2001,
+    "refinement_grid_points": [1001, 2001, 4001],
+    "pulse_q_0": 1.0,
+    "pulse_tau_0": 0.01,
+    "pulse_tau_0_grid": [0.005, 0.01, 0.02],
+    "pulse_horizon": 1.0
+  },
+  "clock": {
+    "metaorder_events": 256,
+    "child_size": 0.00390625,
+    "direct_calendar_grid_points": 2001,
+    "direct_display_constant_completion_multiples": 4.0,
+    "deterministic_activity_grid": [0.5, 1.0, 2.0],
+    "operational_calendar_grid_points": 2001,
+    "operational_calendar_horizon": 2.0,
+    "waiting_scenarios": [
+      {
+        "id": "constant",
+        "law": "constant",
+        "value": 1.0,
+        "mean": 1.0
+      },
+      {
+        "id": "exponential",
+        "law": "exponential",
+        "scale": 1.0,
+        "mean": 1.0
+      },
+      {
+        "id": "lomax_finite_mean",
+        "law": "lomax",
+        "shape": 1.5,
+        "scale": 0.5,
+        "mean": 1.0
+      },
+      {
+        "id": "pareto_infinite_mean",
+        "law": "pareto_I",
+        "shape": 0.7,
+        "scale": 1.0,
+        "mean": null
+      }
+    ]
+  },
+  "completion": {
+    "Q_grid": {
+      "scale": "log10",
+      "minimum": 0.01,
+      "maximum": 100.0,
+      "count": 41
+    },
+    "fixed_operational_rate": 1.0,
+    "fixed_operational_horizon": 1.0,
+    "participation_eta": 0.1,
+    "background_flux_J": 10.0,
+    "canonical_nu_u": 0.0
+  },
+  "conditional_targets": {
+    "F04": "design_extension_after_F02_diagnostics",
+    "F09": "blocked_price_return_kernel_repair",
+    "F10": "after_F02_F04_F07_diagnostics",
+    "nonlinear_volterra": "inactive_unless_Abel_branch_is_insufficient",
+    "full_lattice_PDE": "future_successor_project_only"
+  },
+  "acceptance": {
+    "exact_identity_abs": 5e-13,
+    "asymptotic_relative": 0.005,
+    "mc_rmse": 0.01,
+    "mc_max_abs": 0.03,
+    "analytic_numeric_relative": 1e-9,
+    "grid_refinement_relative": 0.005,
+    "volume_conservation_abs": 1e-12,
+    "slope_abs": 1e-10
+  },
+  "output": {
+    "data_format": "CSV",
+    "figure_formats": ["PDF", "PNG"],
+    "raster_dpi": 300,
+    "matplotlib_backend": "Agg",
+    "overwrite_policy": "versioned_outputs_only"
+  }
+}

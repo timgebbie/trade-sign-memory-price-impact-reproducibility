@@ -1,0 +1,120 @@
+{
+  "version": "v1.0",
+  "checks": {
+    "existing_target_diagnostics_pass": true,
+    "lmf_analytic_boundary_checks_pass": true,
+    "invalid_inputs_rejected": true,
+    "stochastic_seed_repeatability": true,
+    "clock_invariants_hold_across_seeds": true,
+    "abel_grid_edge_checks_pass": true,
+    "pulse_width_edge_checks_pass": true,
+    "completion_and_scale_identities_pass": true,
+    "simulation_only_route_unchanged": true,
+    "conditional_and_deferred_scope_unchanged": true
+  },
+  "existing_target_checks": {
+    "F02": true,
+    "F03": true,
+    "F05": true,
+    "F06": true,
+    "F07": true
+  },
+  "lmf_monte_carlo_sensitivity": {
+    "alpha_1.2_n_16384": {
+      "replicate_rmse": [
+        0.1920594797226719,
+        0.06767260806424212,
+        0.14147363654427442,
+        0.008483169555322615
+      ],
+      "mean_rmse": 0.10242222347162777,
+      "rmse_range": 0.1835763101673493
+    },
+    "alpha_1.2_n_65536": {
+      "replicate_rmse": [
+        0.1717396160036785,
+        0.13767346454887577,
+        0.16969597549880658,
+        0.029446221344586656
+      ],
+      "mean_rmse": 0.12713881934898688,
+      "rmse_range": 0.14229339465909185
+    },
+    "alpha_1.5_n_16384": {
+      "replicate_rmse": [
+        0.03800901620542746,
+        0.03202232660516354,
+        0.027456181741006478,
+        0.032104669409340175
+      ],
+      "mean_rmse": 0.032398048490234414,
+      "rmse_range": 0.010552834464420981
+    },
+    "alpha_1.5_n_65536": {
+      "replicate_rmse": [
+        0.027767190169987865,
+        0.029529214898975722,
+        0.029261975029597518,
+        0.024465586763873743
+      ],
+      "mean_rmse": 0.027755991715608712,
+      "rmse_range": 0.005063628135101979
+    }
+  },
+  "clock_completion_sensitivity": {
+    "constant": {
+      "completion_min": 256.0,
+      "completion_max": 256.0,
+      "completion_spread": 0.0
+    },
+    "exponential": {
+      "completion_min": 252.60593390836362,
+      "completion_max": 264.85636931915394,
+      "completion_spread": 12.250435410790317
+    },
+    "lomax_finite_mean": {
+      "completion_min": 186.29153442474689,
+      "completion_max": 261.524555934138,
+      "completion_spread": 75.23302150939111
+    },
+    "pareto_infinite_mean": {
+      "completion_min": 4681.5033190332415,
+      "completion_max": 19436.39416228032,
+      "completion_spread": 14754.89084324708
+    }
+  },
+  "abel_relative_errors": {
+    "nu_0_n_1001": 2.9517286130412424e-16,
+    "nu_0_n_2001": 3.9356381507216567e-16,
+    "nu_0_n_4001": 1.9678190753608284e-15,
+    "nu_4_n_1001": 3.3463222826749966e-16,
+    "nu_4_n_2001": 3.3463222826749966e-16,
+    "nu_4_n_4001": 4.015586739209996e-15
+  },
+  "pulse_width_sensitivity": {
+    "tau_0=0.0025": {
+      "area_error": 0.0,
+      "peak": 11.283791670955129
+    },
+    "tau_0=0.04": {
+      "area_error": 0.0,
+      "peak": 2.820947917738782
+    }
+  },
+  "completion_scaling": {
+    "fixed_rate_slope": 0.5000000000000001,
+    "fixed_horizon_slope": 1.0000000000000004,
+    "liquidity_ratio": 2.0,
+    "diffusion_ratio": 2.0
+  },
+  "invalid_input_checks": {
+    "lmf alpha at boundary": true,
+    "lmf negative lag": true,
+    "zero activity": true,
+    "negative completion rate": true,
+    "zero completion horizon": true,
+    "zero diffusion": true,
+    "negative resilience": true
+  },
+  "data_csv_sha256": "ed4aa8a33267ffeeba4b2e86872b14d2c8fbe6edb4c591c22fc342960f68932e"
+}

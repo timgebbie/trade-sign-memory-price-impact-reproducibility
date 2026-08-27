@@ -1,0 +1,38 @@
+% RDL T03 v1.0 -- generated publication-table staging file.
+% Artefact status: diagnostic output.
+% Required packages: geometry, booktabs, longtable, array, ragged2e, caption.
+% Source CSV: tables/csv/RDL-T03-v1.0.csv
+% Caption source: captions/RDL-T03-CAP-v1.0.md
+% Generating script: scripts/RDL-TAB.py
+% Copy the block between CUT-PASTE markers into the supplement; retain the packages above.
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{booktabs,longtable,array,ragged2e,caption}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\footnotesize
+% ===== CUT-PASTE TABLE BEGIN =====
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.7cm}>{\RaggedRight\arraybackslash}p{4.0cm}>{\RaggedRight\arraybackslash}p{5.0cm}>{\RaggedRight\arraybackslash}p{4.0cm}>{\RaggedRight\arraybackslash}p{7.0cm}>{\RaggedRight\arraybackslash}p{1.5cm}@{}}
+\caption{Execution-schedule conventions and their completion-impact implications. At fixed operational rate, or fixed participation with fixed background flux, duration is proportional to signed volume and the undamped local-linear Abel benchmark gives square-root completion scaling. Holding the operational horizon fixed instead makes the rate proportional to volume and produces the explicit slope-one negative control. The finite-width child-order row is an origin-regularised response illustration and carries no completion-scaling claim. Sources: F05 and F07 designs and diagnostics; staged by scripts/RDL-TAB.py.}\label{tab:rdl-t03}\\
+\toprule
+\textbf{Schedule} & \textbf{Fixed Quantities} & \textbf{Rate And Duration} & \textbf{Completion Pattern} & \textbf{Evidence And Scope} & \textbf{Target} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\tablename\ \thetable\ continued}\\
+\toprule
+\textbf{Schedule} & \textbf{Fixed Quantities} & \textbf{Rate And Duration} & \textbf{Completion Pattern} & \textbf{Evidence And Scope} & \textbf{Target} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Fixed operational rate & \(\mu_0\) & \(T_u=Q/\mu_0\) & \(I(Q)\propto Q^{1/2}\) & Analytic verification within the undamped local-linear Abel branch & F07 \\
+Fixed participation with fixed background flux & \(\eta;\ J\) & \(\mu_0=\eta J;\ T_u=Q/(\eta J)\) & \(I(Q)\propto Q^{1/2}\) & Same square-root convention because the operational rate is fixed & F07 \\
+Fixed operational horizon & \(T_u\) & \(\mu_0=Q/T_u\) & \(I(Q)\propto Q\) & Explicit negative control; not a contradiction of the fixed-rate result & F07 \\
+Finite-width child order & \(q_0;\ \tau_0\) & Top-hat forcing of area \(q_0\) and width \(\tau_0\) & No completion-scaling claim & Origin-regularised single-order response illustration & F05 \\
+\end{longtable}
+% ===== CUT-PASTE TABLE END =====
+\end{document}

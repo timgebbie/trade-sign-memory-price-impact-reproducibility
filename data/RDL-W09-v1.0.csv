@@ -1,0 +1,48 @@
+category,scenario,metric,value,interpretation,status
+lmf_analytic,alpha_L=1.01,C(0) absolute error,2.2204460492503131e-16,exact identity,pass
+lmf_analytic,alpha_L=1.01,minimum sampled C(tau),0.89779229827623142,finite nonnegative boundary check,pass
+lmf_analytic,alpha_L=1.01,sampled path monotone,True,exact working form remains ordered,pass
+lmf_analytic,alpha_L=1.05,C(0) absolute error,6.6613381477509392e-16,exact identity,pass
+lmf_analytic,alpha_L=1.05,minimum sampled C(tau),0.58395248300094005,finite nonnegative boundary check,pass
+lmf_analytic,alpha_L=1.05,sampled path monotone,True,exact working form remains ordered,pass
+lmf_analytic,alpha_L=1.99,C(0) absolute error,2.2204460492503131e-16,exact identity,pass
+lmf_analytic,alpha_L=1.99,minimum sampled C(tau),3.3640975105033051e-05,finite nonnegative boundary check,pass
+lmf_analytic,alpha_L=1.99,sampled path monotone,True,exact working form remains ordered,pass
+lmf_analytic,alpha_L=2.5,C(0) absolute error,2.2204460492503131e-16,exact identity,pass
+lmf_analytic,alpha_L=2.5,minimum sampled C(tau),1.9878434505580581e-07,finite nonnegative boundary check,pass
+lmf_analytic,alpha_L=2.5,sampled path monotone,True,exact working form remains ordered,pass
+invalid_input,lmf alpha at boundary,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,lmf negative lag,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,zero activity,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,negative completion rate,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,zero completion horizon,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,zero diffusion,ValueError raised,True,invalid branch rejected explicitly,pass
+invalid_input,negative resilience,ValueError raised,True,invalid branch rejected explicitly,pass
+lmf_monte_carlo,alpha_1.2_n_16384,mean replicate RMSE lags 1:64,0.10242222347162777,finite-sample sensitivity only,diagnostic
+lmf_monte_carlo,alpha_1.2_n_16384,replicate RMSE range,0.18357631016734929,seed dispersion; no promotion threshold,diagnostic
+lmf_monte_carlo,alpha_1.2_n_65536,mean replicate RMSE lags 1:64,0.12713881934898688,finite-sample sensitivity only,diagnostic
+lmf_monte_carlo,alpha_1.2_n_65536,replicate RMSE range,0.14229339465909185,seed dispersion; no promotion threshold,diagnostic
+lmf_monte_carlo,alpha_1.5_n_16384,mean replicate RMSE lags 1:64,0.032398048490234414,finite-sample sensitivity only,diagnostic
+lmf_monte_carlo,alpha_1.5_n_16384,replicate RMSE range,0.010552834464420981,seed dispersion; no promotion threshold,diagnostic
+lmf_monte_carlo,alpha_1.5_n_65536,mean replicate RMSE lags 1:64,0.027755991715608712,finite-sample sensitivity only,diagnostic
+lmf_monte_carlo,alpha_1.5_n_65536,replicate RMSE range,0.0050636281351019788,seed dispersion; no promotion threshold,diagnostic
+direct_clock,constant,completion-time spread across seeds,0,calendar duration may vary while event order is preserved,diagnostic
+direct_clock,exponential,completion-time spread across seeds,12.250435410790317,calendar duration may vary while event order is preserved,diagnostic
+direct_clock,lomax_finite_mean,completion-time spread across seeds,75.233021509391108,calendar duration may vary while event order is preserved,diagnostic
+direct_clock,pareto_infinite_mean,completion-time spread across seeds,14754.89084324708,calendar duration may vary while event order is preserved,diagnostic
+operational_clock,alpha_U=0.25,terminal operational time,0.5,monotone deterministic edge,pass
+operational_clock,alpha_U=4,terminal operational time,8,monotone deterministic edge,pass
+abel_grid,nu_0_n_1001,relative L-infinity error,2.9517286130412424e-16,analytic versus cell-integrated response,pass
+abel_grid,nu_0_n_2001,relative L-infinity error,3.9356381507216567e-16,analytic versus cell-integrated response,pass
+abel_grid,nu_0_n_4001,relative L-infinity error,1.9678190753608284e-15,analytic versus cell-integrated response,pass
+abel_grid,nu_4_n_1001,relative L-infinity error,3.3463222826749966e-16,analytic versus cell-integrated response,pass
+abel_grid,nu_4_n_2001,relative L-infinity error,3.3463222826749966e-16,analytic versus cell-integrated response,pass
+abel_grid,nu_4_n_4001,relative L-infinity error,4.0155867392099961e-15,analytic versus cell-integrated response,pass
+pulse_width,tau_0=0.0025,forcing-area absolute error,0,fixed-area edge width,pass
+pulse_width,tau_0=0.0025,finite response peak,11.283791670955129,peak height is width-sensitive,diagnostic
+pulse_width,tau_0=0.04,forcing-area absolute error,0,fixed-area edge width,pass
+pulse_width,tau_0=0.04,finite response peak,2.8209479177387822,peak height is width-sensitive,diagnostic
+completion,fixed rate extended Q,fitted slope,0.50000000000000011,schedule-conditional square-root identity,pass
+completion,fixed horizon extended Q,fitted slope,1.0000000000000004,slope-one negative control,pass
+completion,liquidity scaling,impact ratio L=1 to L=2,2,inverse-liquidity identity,pass
+completion,diffusion scaling,impact ratio D=1 to D=4,2,inverse-square-root diffusion identity,pass

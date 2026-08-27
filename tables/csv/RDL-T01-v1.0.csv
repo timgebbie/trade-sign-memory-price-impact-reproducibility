@@ -1,0 +1,26 @@
+concept,primary_source_notation,rdl_active_notation_tex,rule_or_exclusion
+event index,m,\(m\),Retained exactly as child-order event order
+event timestamp,t_m or T_m,\(T_m\),Calendar timestamp of event m in the direct-counter route
+event waiting time,Delta t_m,\(\Delta t_m\),Positive increment used only by the direct-counter route
+event counter,N_t,\(N_t\),Right-continuous inverse counter
+operational time,source continuum t,\(u\),Explicit operational-response representation
+calendar time,source physical t,\(t\),Used only after a declared projection
+activity clock,implicit,\(U(t)\),Monotone Route B map
+activity rate,implicit,\(\alpha_U(t)=\mathrm dU/\mathrm dt\),Kept distinct from the LMF tail exponent
+event front,p_m,\(Y_m:=p_m\),Absolute event-time state
+operational front,p(t),\(S(u)\),Absolute operational log-price state
+operational impact,p(t)-p_0,\(I_u(u)=S(u)-S(0)\),State and displacement remain distinct
+calendar front,X(t),\(X_A(t)=Y_{N_t};\ X_B(t)=S(U(t))\),Route suffix required when both routes appear
+calendar impact,implicit,\(I_B(t)=I_u(U(t))\),Route B definition; not an empirical mean-impact object
+local liquidity slope,mathcal L,\(\mathcal L_u\),Not the meta-order length
+operational diffusion,D,\(D_u\),Operational-response parameter
+operational resilience,nu,\(\nu_u\),Operational-response parameter
+meta-order length,L_n,\(L_n\),Retained for the renewal model
+operational forcing,m(t),\(\mu(u)\),Avoids collision with event index m
+calendar execution rate,implicit,\(v(t)\),Requires an explicit schedule crosswalk
+total signed volume,Q,\(Q\),Sum or integral under the declared schedule
+length-tail exponent,alpha,\(\alpha_L\),Kept distinct from activity
+sign-memory exponent,gamma,\(\gamma_\epsilon\),No variance interpretation
+response kernel,G_nu or Abel reduction,"\(g_{\nu,D}\)",Mean response only
+return propagator,G_l,\(G^{\mathrm{ret}}_\ell\),Distinct from the Abel response kernel
+coarse-graining scale,not used for mean impact,\(\tau_0\),Finite-width regularisation only; never a variance scale

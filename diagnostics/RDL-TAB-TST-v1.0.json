@@ -1,0 +1,42 @@
+{
+  "version": "v1.0",
+  "tables": [
+    {
+      "table_id": "T01",
+      "row_count": 25,
+      "column_count": 4,
+      "csv_sha256": "3b10e3422093f1c8861b228b129afd8259b00087841c7e943566a283d68799af",
+      "caption_sha256": "6149e9453537a300fd3570acf24328080df3a62c212da5c5c9ddffafa0687d00",
+      "tex_sha256": "b550da0d0aa02acb6740887c67fa8a5a11421851458cd89a7257c4b842218c9d"
+    },
+    {
+      "table_id": "T02",
+      "row_count": 5,
+      "column_count": 6,
+      "csv_sha256": "ae3a9eb395dc6f14740efb620dd7078235d1f84b836dc3218d2c3211448815ec",
+      "caption_sha256": "617bf201b3ebf79609d90a6c105f0a0435320e47384f6bf28557a5c98c1509be",
+      "tex_sha256": "96636af3898bdfbd8ef5b7e0e83f67230a49476d91cc1793ff9e1c05dd6db7af"
+    },
+    {
+      "table_id": "T03",
+      "row_count": 4,
+      "column_count": 6,
+      "csv_sha256": "3ef673c331765636ec1633888cac96f19373fff5ab720d3455f6d506fe8fd3ac",
+      "caption_sha256": "ce401a1cbadcf6b9e9cbb4f71029d2e39ec63dc8f2d4c408671fc302017a9eeb",
+      "tex_sha256": "3d1620b277ce08a6b05c4793c6e7fad93b81f854c37eecfdebbac5736754ac91"
+    },
+    {
+      "table_id": "T04",
+      "row_count": 28,
+      "column_count": 7,
+      "csv_sha256": "cb3f42ddc0f4ceae0aa51b62b1e9ad6d8281eb7e3a38a269fc97ac706830cc9a",
+      "caption_sha256": "bc97b88f66410994d53819f4d88451dfd8d310d1679baed58bc6c18b502c2af8",
+      "tex_sha256": "2a8b0c2e27b204f25a5ca58b8cc3ba3442d12f2b959850984f6f63b36c7a5164"
+    }
+  ],
+  "checks": {
+    "four_tables_staged": true,
+    "all_tables_nonempty": true,
+    "all_hashes_recorded": true
+  }
+}

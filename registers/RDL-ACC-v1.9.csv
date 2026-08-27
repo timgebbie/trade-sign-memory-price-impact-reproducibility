@@ -1,0 +1,31 @@
+acc_id,target,criterion,threshold_or_expected,status
+ACC01,configuration,JSON parses and required top-level keys exist,"zero schema errors",frozen
+ACC02,environment,Python and package versions are recorded,"exact reference versions; deviations reported",frozen
+ACC03,F01,diagram has two alternative projection routes,"no sequential double-clock path",pass
+ACC04,F01,notation matches RDL-NOT-v1.1,"zero unresolved symbol collisions",pass
+ACC05,F01,TikZ compiles standalone and in supplement,"zero LaTeX errors and no clipped content",pass
+ACC06,F03,zeta-distribution identities,"C_epsilon(0)=1 within 5e-13; values finite and nonnegative",pass
+ACC07,F03,exponent relation,"gamma_epsilon=alpha_L-1 exactly for configured scenarios",pass
+ACC08,F03,asymptotic agreement,"relative error <=0.005 for tau>=10 on every alpha_L display scenario",pass
+ACC09,F03,optional baseline Monte Carlo agreement,"alpha_L=1.5 replicate-mean RMSE <=0.01 and max absolute error <=0.03 over lags 1:128",pass
+ACC10,F03,random repeatability,"byte-identical CSV for same environment and seed contexts",pass
+ACC11,F06,undamped analytic benchmark,"relative L-infinity error <=1e-9 away from zero",pass
+ACC12,F06,damped analytic benchmark and nu limit,"relative L-infinity error <=1e-9; nu->0 branch continuous",pass
+ACC13,F06,completion continuity,"left and right analytic values agree within 5e-13",pass
+ACC14,F06,grid refinement for non-analytic schedules,"relative L-infinity change <=0.005 between 2001 and 4001 grids",pass
+ACC15,F02,direct clock validity,"all waits positive; timestamps strictly increasing; counter nondecreasing",pass
+ACC16,F02,direct inversion,"N(T_m)=m under the documented right-continuous convention",pass
+ACC17,F02,event and volume preservation,"event order exact and terminal signed volume error <=1e-12",pass
+ACC18,F02,operational clock validity,"U(t) monotone; identity path error <=1e-12; mapped response finite and within declared domain",pass
+ACC19,F02,route separation,"different native objects and mappings declared; no mixed route fields or composed path",pass
+ACC20,F05,pulse conservation,"integrated forcing equals q_0 within 1e-12",pass
+ACC21,F05,finite-origin response,"response finite at every plotted time and zero before forcing",pass
+ACC22,F07,canonical fixed-rate slope,"absolute error from 0.5 <=1e-10",pass
+ACC23,F07,fixed-horizon negative-control slope,"absolute error from 1.0 <=1e-10",pass
+ACC24,F07,schedule labels,"rate horizon participation and clock convention present in data and caption",pass
+ACC25,F08,sign mapping,"all equality arrows carry their sufficient conditions",pass
+ACC26,F08,scope boundary,"no numerical sign-agreement statistic and no lattice claim",pass
+ACC27,F04,activation gate,"separate accepted observable and aging design required",conditional
+ACC28,F09,activation gate,"source price/return kernel convention repaired",blocked
+ACC29,F10,activation gate,"F02 F04 and F07 accepted diagnostics exist",deferred
+ACC30,lattice/PDE,scope gate,"new successor project and Python-port parity plan required",future_only

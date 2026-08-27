@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "target": "F02",
+  "version": "v1.2",
+  "base_config": "config/RDL-CFG-v1.1.json",
+  "route_a": {
+    "calendar_horizon_constant_completion_multiples": 4.0,
+    "native_object": "Q_m",
+    "projected_object": "Q_{N_t}",
+    "mapping": "Q_m -> N_t -> Q_{N_t}"
+  },
+  "route_b": {
+    "calendar_horizon_T_u_multiples": 3.0,
+    "operational_response_domain_T_u_multiples": 6.0,
+    "native_object": "I_u(u)",
+    "projected_object": "I_B(t)=I_u(U(t))",
+    "mapping": "I_u(u) -> I_u(U(t)), U(t)=alpha_U t"
+  },
+  "figure": {
+    "title": "Two distinct clock mappings for meta-order delivery and impact",
+    "panel_a_title": "Route A — Calendar-time delivery of one event-time meta-order",
+    "panel_b_title": "Route B — Subordinated reduced Abel impact response",
+    "route_a_mapping_position_axes": [0.56, 0.82],
+    "route_b_mapping_position_axes": [0.97, 0.95],
+    "mapping_label_boundary": "none",
+    "clarification": "The panels illustrate separate clock mappings of different native objects: cumulative delivery in Route A and reduced impact in Route B. They are not composed, and no pointwise correspondence between their curves is imposed."
+  }
+}

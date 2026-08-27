@@ -1,0 +1,59 @@
+% RDL T01 v1.0 -- generated publication-table staging file.
+% Artefact status: diagnostic output.
+% Required packages: geometry, booktabs, longtable, array, ragged2e, caption.
+% Source CSV: tables/csv/RDL-T01-v1.0.csv
+% Caption source: captions/RDL-T01-CAP-v1.0.md
+% Generating script: scripts/RDL-TAB.py
+% Copy the block between CUT-PASTE markers into the supplement; retain the packages above.
+\documentclass[10pt,a4paper,landscape]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{booktabs,longtable,array,ragged2e,caption}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\footnotesize
+% ===== CUT-PASTE TABLE BEGIN =====
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{3.0cm}>{\RaggedRight\arraybackslash}p{4.2cm}>{\RaggedRight\arraybackslash}p{5.0cm}>{\RaggedRight\arraybackslash}p{12.0cm}@{}}
+\caption{Notation crosswalk and exclusions for the active RDL baseline. The table maps the primary RD2LMF notation to the route-specific notation used by the computational supplement. It separates event order, operational response and calendar projection; distinguishes absolute state from impact; and prevents collisions between activity, tail, liquidity and propagator symbols. These are representation controls rather than new mathematical results. Source: registers/RDL-NOT-v1.1.csv; staged by scripts/RDL-TAB.py.}\label{tab:rdl-t01}\\
+\toprule
+\textbf{Concept} & \textbf{Primary Source Notation} & \textbf{Rdl Active Notation} & \textbf{Rule Or Exclusion} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\tablename\ \thetable\ continued}\\
+\toprule
+\textbf{Concept} & \textbf{Primary Source Notation} & \textbf{Rdl Active Notation} & \textbf{Rule Or Exclusion} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+event index & m & \(m\) & Retained exactly as child-order event order \\
+event timestamp & t\_m or T\_m & \(T_m\) & Calendar timestamp of event m in the direct-counter route \\
+event waiting time & Delta t\_m & \(\Delta t_m\) & Positive increment used only by the direct-counter route \\
+event counter & N\_t & \(N_t\) & Right-continuous inverse counter \\
+operational time & source continuum t & \(u\) & Explicit operational-response representation \\
+calendar time & source physical t & \(t\) & Used only after a declared projection \\
+activity clock & implicit & \(U(t)\) & Monotone Route B map \\
+activity rate & implicit & \(\alpha_U(t)=\mathrm dU/\mathrm dt\) & Kept distinct from the LMF tail exponent \\
+event front & p\_m & \(Y_m:=p_m\) & Absolute event-time state \\
+operational front & p(t) & \(S(u)\) & Absolute operational log-price state \\
+operational impact & p(t)-p\_0 & \(I_u(u)=S(u)-S(0)\) & State and displacement remain distinct \\
+calendar front & X(t) & \(X_A(t)=Y_{N_t};\ X_B(t)=S(U(t))\) & Route suffix required when both routes appear \\
+calendar impact & implicit & \(I_B(t)=I_u(U(t))\) & Route B definition; not an empirical mean-impact object \\
+local liquidity slope & mathcal L & \(\mathcal L_u\) & Not the meta-order length \\
+operational diffusion & D & \(D_u\) & Operational-response parameter \\
+operational resilience & nu & \(\nu_u\) & Operational-response parameter \\
+meta-order length & L\_n & \(L_n\) & Retained for the renewal model \\
+operational forcing & m(t) & \(\mu(u)\) & Avoids collision with event index m \\
+calendar execution rate & implicit & \(v(t)\) & Requires an explicit schedule crosswalk \\
+total signed volume & Q & \(Q\) & Sum or integral under the declared schedule \\
+length-tail exponent & alpha & \(\alpha_L\) & Kept distinct from activity \\
+sign-memory exponent & gamma & \(\gamma_\epsilon\) & No variance interpretation \\
+response kernel & G\_nu or Abel reduction & \(g_{\nu,D}\) & Mean response only \\
+return propagator & G\_l & \(G^{\mathrm{ret}}_\ell\) & Distinct from the Abel response kernel \\
+coarse-graining scale & not used for mean impact & \(\tau_0\) & Finite-width regularisation only; never a variance scale \\
+\end{longtable}
+% ===== CUT-PASTE TABLE END =====
+\end{document}

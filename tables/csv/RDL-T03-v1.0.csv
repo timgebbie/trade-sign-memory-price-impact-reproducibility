@@ -1,0 +1,5 @@
+schedule,fixed_quantities_tex,rate_and_duration_tex,completion_pattern_tex,evidence_and_scope,target
+Fixed operational rate,\(\mu_0\),\(T_u=Q/\mu_0\),\(I(Q)\propto Q^{1/2}\),Analytic verification within the undamped local-linear Abel branch,F07
+Fixed participation with fixed background flux,\(\eta;\ J\),\(\mu_0=\eta J;\ T_u=Q/(\eta J)\),\(I(Q)\propto Q^{1/2}\),Same square-root convention because the operational rate is fixed,F07
+Fixed operational horizon,\(T_u\),\(\mu_0=Q/T_u\),\(I(Q)\propto Q\),Explicit negative control; not a contradiction of the fixed-rate result,F07
+Finite-width child order,\(q_0;\ \tau_0\),Top-hat forcing of area \(q_0\) and width \(\tau_0\),No completion-scaling claim,Origin-regularised single-order response illustration,F05

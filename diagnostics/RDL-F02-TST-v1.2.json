@@ -1,0 +1,102 @@
+{
+  "target": "F02",
+  "version": "v1.2",
+  "checks": {
+    "ACC15": true,
+    "ACC16": true,
+    "ACC17": true,
+    "ACC18": true,
+    "ACC19": true
+  },
+  "direct_clock_validity": {
+    "constant": {
+      "waits_positive": true,
+      "timestamps_strict": true,
+      "counter_nondecreasing": true
+    },
+    "exponential": {
+      "waits_positive": true,
+      "timestamps_strict": true,
+      "counter_nondecreasing": true
+    },
+    "lomax_finite_mean": {
+      "waits_positive": true,
+      "timestamps_strict": true,
+      "counter_nondecreasing": true
+    },
+    "pareto_infinite_mean": {
+      "waits_positive": true,
+      "timestamps_strict": true,
+      "counter_nondecreasing": true
+    }
+  },
+  "maximum_inversion_index_error": {
+    "constant": 0,
+    "exponential": 0,
+    "lomax_finite_mean": 0,
+    "pareto_infinite_mean": 0
+  },
+  "event_and_volume_preservation": {
+    "constant": {
+      "event_order_exact": true,
+      "terminal_volume_error": 0.0
+    },
+    "exponential": {
+      "event_order_exact": true,
+      "terminal_volume_error": 0.0
+    },
+    "lomax_finite_mean": {
+      "event_order_exact": true,
+      "terminal_volume_error": 0.0
+    },
+    "pareto_infinite_mean": {
+      "event_order_exact": true,
+      "terminal_volume_error": 0.0
+    }
+  },
+  "operational_clock_validity": {
+    "activity_0.5": {
+      "clock_monotone": true,
+      "domain_max": 1.5,
+      "declared_response_domain_max": 6.0,
+      "domain_clipped": false,
+      "response_finite": true,
+      "identity_path_error": 0.0
+    },
+    "activity_1": {
+      "clock_monotone": true,
+      "domain_max": 3.0,
+      "declared_response_domain_max": 6.0,
+      "domain_clipped": false,
+      "response_finite": true,
+      "identity_path_error": 0.0
+    },
+    "activity_2": {
+      "clock_monotone": true,
+      "domain_max": 6.0,
+      "declared_response_domain_max": 6.0,
+      "domain_clipped": false,
+      "response_finite": true,
+      "identity_path_error": 0.0
+    }
+  },
+  "route_separation": true,
+  "route_semantics": {
+    "route_fields_separated": true,
+    "native_objects_labeled": true,
+    "different_native_objects": true,
+    "figure_clarification": "The panels illustrate separate clock mappings of different native objects: cumulative delivery in Route A and reduced impact in Route B. They are not composed, and no pointwise correspondence between their curves is imposed."
+  },
+  "realized_completion_ratios": {
+    "constant": 1.0,
+    "exponential": 0.9867419293295454,
+    "lomax_finite_mean": 0.7277013063466675,
+    "pareto_infinite_mean": 21.863362443167773
+  },
+  "checksums": {
+    "data_csv": "7d6cf80f347c24e7d6c3616d62815726f2f29662bc35c89e8d55ea907fb25e96",
+    "waits_csv": "9754a6693ac2ec17be1317c2a066ad75d04545d141e5808011cb10d70d570580",
+    "pdf": "324322b98541e6c3990f52829473a210e87f1293c49caecb91a4b0422ea414d6",
+    "png": "e0083ea653f6cf812e1358d73f940d963f6d90ed45a7251bfdf837b5634ed8c4"
+  }
+}

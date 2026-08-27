@@ -1,0 +1,17 @@
+{
+  "status": "failed_preserved_diagnostic",
+  "date": "2026-07-10",
+  "scope": "initial optional Monte Carlo run over the full exact display grid",
+  "thresholds": {
+    "rmse_lags_1_128": 0.01,
+    "max_abs_lags_1_128": 0.03
+  },
+  "results": {
+    "1.2": {"rmse": 0.04661362634176409, "max_abs": 0.05230169546450686},
+    "1.4": {"rmse": 0.0018057053779659022, "max_abs": 0.0037763188781958223},
+    "1.6": {"rmse": 0.007362725605217829, "max_abs": 0.009481086278697086},
+    "1.8": {"rmse": 0.0008105588409941187, "max_abs": 0.002589976072993631}
+  },
+  "finding": "The exact and FFT checks passed. The alpha_L=1.2 eight-path mean failed because the near-boundary heavy-tail scenario has slow renewal equilibration and high finite-sample dispersion.",
+  "decision": "Retain the display grid as exact verification and apply the unchanged optional MC gate to the declared alpha_L=1.5 baseline only."
+}

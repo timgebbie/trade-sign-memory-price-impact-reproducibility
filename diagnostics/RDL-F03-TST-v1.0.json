@@ -1,0 +1,45 @@
+{
+  "target": "F03",
+  "version": "v1.0",
+  "checks": {
+    "ACC06": true,
+    "ACC07": true,
+    "ACC08": true,
+    "ACC09": true,
+    "ACC10": true,
+    "direct_fft": true
+  },
+  "identity_absolute_errors": {
+    "1.2": 1.1102230246251565e-16,
+    "1.4": 2.220446049250313e-16,
+    "1.6": 2.220446049250313e-16,
+    "1.8": 1.1102230246251565e-16
+  },
+  "maximum_relative_asymptotic_error_tau_ge_10": {
+    "1.2": 0.00019934173747083837,
+    "1.4": 0.0004649964496590665,
+    "1.6": 0.0007969282062998162,
+    "1.8": 0.0011951118413859414
+  },
+  "finite_nonnegative": {
+    "1.2": true,
+    "1.4": true,
+    "1.6": true,
+    "1.8": true
+  },
+  "monotone_nonincreasing": {
+    "1.2": true,
+    "1.4": true,
+    "1.6": true,
+    "1.8": true
+  },
+  "direct_fft_max_abs_error": 2.220446049250313e-16,
+  "exact_csv_byte_repeatable": true,
+  "monte_carlo_csv_byte_repeatable": true,
+  "monte_carlo": {
+    "1.5": {
+      "rmse_lags_1_128": 0.006504674103048639,
+      "max_abs_lags_1_128": 0.008893981835188927
+    }
+  }
+}

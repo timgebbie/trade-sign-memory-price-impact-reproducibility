@@ -1,0 +1,29 @@
+{
+  "target": "F07",
+  "version": "v1.0",
+  "checks": {
+    "ACC22": true,
+    "ACC23": true,
+    "ACC24": true
+  },
+  "fitted_slopes": {
+    "fixed_operational_rate": 0.4999999999999999,
+    "fixed_participation": 0.4999999999999999,
+    "fixed_operational_horizon": 1.0000000000000002
+  },
+  "volume_duration_identity_max_abs_errors": {
+    "fixed_operational_rate": 0.0,
+    "fixed_participation": 0.0,
+    "fixed_operational_horizon": 0.0,
+    "activity_0.5": 0.0,
+    "activity_1": 0.0,
+    "activity_2": 0.0
+  },
+  "operational_impact_clock_invariance_max_abs_error": 0.0,
+  "schedule_and_clock_labels_complete": true,
+  "checksums": {
+    "csv": "a826889ec29828ba78494b15e6702b17b6659dca37d3d6487737d892ae5aebda",
+    "pdf": "fa76e27207d2a2dabe341472b592e36498eb9f3436217375433ae221569b5b5d",
+    "png": "250724419ee945cd69ebc99f807e67aa2cb9bb68cc7b5df6928104a000c9b44e"
+  }
+}

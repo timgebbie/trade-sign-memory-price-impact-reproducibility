@@ -1,0 +1,29 @@
+code,symbol_or_name,baseline,scenario_or_range,units_or_scaling,dependent_outputs,status
+PAR01,alpha_L,1.5,1.2; 1.4; 1.6; 1.8,dimensionless meta-order tail exponent,F03; later F04,frozen
+PAR02,gamma_epsilon,0.5,0.2; 0.4; 0.6; 0.8,derived as alpha_L-1,F03; later F04,derived
+PAR03,mathcal_L_u,1.0,positive sensitivity later,dimensionless local liquidity slope,F05; F06; F07; F02,frozen
+PAR04,D_u,1.0,positive sensitivity later,dimensionless operational diffusion scale,F05; F06; F07; F02,frozen
+PAR05,nu_u,0.0,0; 0.25; 1; 4,reported as nu_u times T_u,F05; F06; F07,frozen
+PAR06,mu_0,1.0,fixed-rate baseline,dimensionless signed operational rate,F06; F07; F02,frozen
+PAR07,T_u,1.0,post-completion horizon 4 times T_u,dimensionless operational horizon,F06; F07; F02,frozen
+PAR08,Q,1.0,10^-2 to 10^2; 41 log-spaced points,dimensionless signed volume,F02; F07,frozen
+PAR09,q_0,1.0,single-pulse area,dimensionless signed child-order size,F05,frozen
+PAR10,tau_0,0.01,0.005; 0.01; 0.02,fraction of unit operational horizon,F05,frozen
+PAR11,L_meta,256,one illustrative meta-order,event count,F02,frozen
+PAR12,q_child,0.00390625,1/L_meta,dimensionless volume per event,F02,derived
+PAR13,alpha_U,1.0,0.5; 1; 2,dimensionless operational activity rate,F01; F02; F07,frozen
+PAR14,wait_constant,1.0,single baseline,calendar units per event,F02,frozen
+PAR15,wait_exponential,1.0,scale and mean,calendar units per event,F02,frozen
+PAR16,wait_lomax,shape 1.5; scale 0.5,finite mean 1,calendar units per event,F02,frozen
+PAR17,wait_pareto,shape 0.7; scale 1,infinite mean,calendar units per event,F02,frozen
+PAR18,n_events_mc,262144,2^18 events per replicate,event count,F03,diagnostic
+PAR19,n_burn_mc,16384,2^14 events,event count,F03,diagnostic
+PAR20,n_rep_mc,8,independent deterministic seed contexts,replicate count,F03,diagnostic
+PAR21,max_lag_exact,10000,integer lags 0 through 10000,event lag,F03,frozen
+PAR22,max_lag_mc,2048,acceptance window 1 through 128,event lag,F03,diagnostic
+PAR23,n_grid_u,2001,1001; 2001; 4001 refinement,uniform operational grid,F05; F06,frozen
+PAR24,Q_grid,41,10^-2 to 10^2,log10 grid,F07,frozen
+PAR25,seed_master,20260710,context-derived SeedSequence,integer seed for stochastic targets,F02; F03; later F04; later F10,frozen
+PAR26,beta_G,,blocked,not selected,F09,deferred
+PAR27,lambda_G,,blocked,not selected,F09,deferred
+PAR28,lattice_controls,,future successor project,not selected,full lattice/PDE,future only

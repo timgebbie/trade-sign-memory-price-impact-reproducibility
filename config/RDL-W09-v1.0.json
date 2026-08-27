@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "purpose": "sensitivity_robustness_and_edge_cases_only",
+  "lmf": {
+    "analytic_alpha_edges": [1.01, 1.05, 1.99, 2.5],
+    "diagnostic_lags": [0, 1, 10, 100, 1000, 10000],
+    "mc_alphas": [1.2, 1.5],
+    "mc_event_counts": [16384, 65536],
+    "mc_burn_events": 4096,
+    "mc_replicates": 4,
+    "mc_max_lag": 64,
+    "seed_target_id": 9
+  },
+  "clock": {
+    "n_events": 256,
+    "seed_offsets": [0, 100, 200, 300],
+    "activity_edges": [0.25, 4.0]
+  },
+  "response": {
+    "resilience_edges": [0.0, 4.0],
+    "grid_points": [1001, 2001, 4001],
+    "display_horizon": 4.0,
+    "completion_time": 1.0,
+    "pulse_width_edges": [0.0025, 0.04],
+    "pulse_grid_points": 4001
+  },
+  "completion": {
+    "minimum_volume": 1e-6,
+    "maximum_volume": 1e6,
+    "count": 49
+  },
+  "tolerances": {
+    "identity_abs": 1e-12,
+    "analytic_numeric_relative": 1e-10,
+    "slope_abs": 1e-10
+  }
+}

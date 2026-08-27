@@ -1,0 +1,11 @@
+RDL simulation data instructions
+
+Current routing: simulation only.
+
+No empirical market data are required or supplied. This directory will contain
+declared simulation inputs and derived machine-readable CSV files only.
+Stochastic raw outputs belong in /raw-outputs. Plot-ready and table-ready
+derived data will be stored under /data/derived once implementation begins.
+
+Any future empirical input would require a new scope decision and a separate
+data-science provenance, licensing, cleaning, sampling and validation plan.

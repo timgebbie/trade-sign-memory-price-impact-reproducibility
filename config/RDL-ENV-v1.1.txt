@@ -1,0 +1,12 @@
+# RDL W05 reference environment
+# Python runtime: CPython 3.12.13
+# Set MPLBACKEND=Agg and MPLCONFIGDIR to a writable project-local or temporary path.
+
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+
+# Publication build checked with pdfTeX 3.141592653-2.6-1.40.25
+# (TeX Live 2023/Debian).
+# pandas, seaborn, plotnine, PyYAML, Jupyter and Docker are not required.
+

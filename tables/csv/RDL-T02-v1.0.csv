@@ -1,0 +1,6 @@
+layer,native_object_tex,map_or_construction_tex,calendar_interpretation,key_control,dependent_outputs
+Child-order event sequence,"\(m=0,1,2,\ldots\)",Ordered states and trade signs,No calendar duration is intrinsic,Event order is primary,F03; F08
+Event timestamps,\(\Delta t_m>0;\ T_m=\sum_{k=1}^m\Delta t_k\),Attach positive waiting times,Calendar time assigned to each event,Do not mix waiting-law regimes,F02
+Route A inverse counter,\(N_t=\max\{m:T_m\le t\}\),\(X_A(t)=Y_{N_t}\),Direct event-counter projection,Right-continuous convention,F02
+Operational response,\(u\ge0;\ S(u);\ I_u(u)\),Solve the response in operational time,No calendar representation yet,Do not apply Route A afterward without a coupling,F05; F06; F07
+Route B activity projection,\(u=U(t);\ \alpha_U=\mathrm dU/\mathrm dt\ge0\),\(X_B(t)=S(U(t));\ I_B(t)=I_u(U(t))\),Calendar representation through activity,Monotone clock and explicit route label,F02; F07
